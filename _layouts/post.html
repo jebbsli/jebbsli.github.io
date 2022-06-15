@@ -1,60 +1,81 @@
 ---
-layout: default
+layout: framework
+banner:
+banner_html: post-header.html
+hidden: []
+sidebar:
+  - article-menu
 ---
 
-<article class="post">
+<div class="post">
+  <section>
 
-    <div class="post__title">
-        <h1 class="post__title__text">{{ page.title }}</h1>
-    </div>
-    <div class="post__meta"> 
-        <div class="post__meta__category">
-            {% for category in page.category %}
-                <p class="post__meta__category__title" style="background: {{ site.category | where: "category", category | map: "hue"}}">{{ site.category | where: "category", category | map: "title"}}</p>
-            {% else %}
-                <p class="post__meta__category__title">No category</p>
-            {% endfor %}
-        </div>
-        <p class="post__meta__divider">·</p>
-        <div class="post__meta__date">
-            {{ page.date | date: '%B %d, %Y' }}
-        </div>
-        {% if page.author != nil %}
-            {% assign author = site.authors | where: "nick", page.author | first %}
-            <p class="post__meta__divider">·</p>
-            <div class="post__meta__author">
-                <p>by </p>
-                <img class="post__meta__author__photo" src="{{ site.url }}/{{ author.photo_dir }}"/>
-                <p>{{ author.full_name }}</p>
-            </div>
-        {% endif %}
-    </div>
+    {%- assign name = 'banner' -%}
+    {%- include functions.html func='get_value' -%}
+    {%- assign banner = return -%}
 
-    {% if page.prevPart != nil or page.nextPart != nil %}
-        <div class="post__navigator">
-            <div
-                class="post__navigator__buttons"
-                {% if page.prevPart == nil %}
-                    style="justify-content: flex-end;"
-                {% endif %}
-            >
-                {% if page.prevPart != nil %}
-                    <a href="{% link {{ page.prevPart }} %}">
-                        <img  class="arrow-left" src="{{ site.url }}/assets/img/icons/arrow_left.svg"/>
-                        Previous
-                    </a>
-                {% endif %}
-                {% if page.nextPart != nil %}
-                    <a href="{% link {{ page.nextPart }} %}">
-                        Next
-                        <img class="arrow-right" src="{{ site.url }}/assets/img/icons/arrow_right.svg"/>
-                    </a>
-                {% endif %}
-            </div>
-        </div>
-    {% endif %}
+    {%- assign name = 'hidden' -%}
+    {%- include functions.html func='get_value' -%}
+    {%- assign hidden = return -%}
 
-    <div class="post__content">
-        {{ content }}
+    {%- assign result = hidden | where_exp: "item", "item == 'header'" -%}
+    {%- if banner == nil and result.size == 0 -%}
+    {%- include views/post-header.html -%}
+    {%- endif -%}
+
+    {%- include views/article.html -%}
+
+    {%- assign result = hidden | where_exp: "item", "item == 'navigator'" -%}
+    {%- if result.size == 0 -%}
+    <div class="post-nav">
+      {%- if page.previous -%}
+        <a class="previous" href="{{ page.previous.url | relative_url }}" title="{{
+          page.previous.title | escape }}">{{ page.previous.title | escape | truncatewords: 6 }}</a>
+      {%- else -%}
+      <span></span>
+      {%- endif -%}
+
+      {%- if page.next -%}
+        <a class="next" href="{{ page.next.url | relative_url }}" title="{{ page.next.title | escape }}">{{ page.next.title | escape | truncatewords: 6 }}</a>
+      {%- else -%}
+      <span></span>
+      {%- endif -%}
     </div>
-</article>
+    {%- endif -%}
+
+    {%- assign result = hidden | where_exp: "item", "item == 'related_posts'" -%}
+    {%- if result.size == 0 -%}
+    <div class="post-related">
+      <div>Related Articles</div>
+      <ul>
+        {% assign posts = site[page.collection] | sample:4 %}
+        {%- for post in posts -%}
+        <li><a class="post-link" href="{{post.url | relative_url}}" title="{{ page.next.title | escape }}">{{ post.title | escape | truncatewords: 12 }}</a></li>
+        {%- endfor -%}
+      </ul>
+    </div>
+    {%- endif -%}
+
+    {%- assign result = hidden | where_exp: "item", "item == 'comments'" -%}
+    {%- if result.size == 0 -%}
+    <div class="post-comments">
+      {%- if page.comments != false -%}
+
+      {%- if site.disqus.shortname -%}
+      {%- include extensions/comments/disqus.html -%}
+      {%- endif -%}
+
+      {%- if site.gitment.username -%}
+      {%- include extensions/comments/gitment.html -%}
+      {%- endif -%}
+
+      {%- if site.utterances.repo -%}
+      {%- include extensions/comments/utterances.html -%}
+      {%- endif -%}
+
+      {%- endif -%}
+    </div>
+    {%- endif -%}
+
+  </section>
+</div>

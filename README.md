@@ -1,240 +1,200 @@
-[![Blog Demo](https://img.shields.io/badge/demo-golasblog-blue?style=flat-square)](https://golas.blog/)
-[![Generic Demo](https://img.shields.io/badge/demo-generic-green?style=flat-square)](https://simplex-demo.golas.systems/)
+<div align="center">
+  <br>
 
-The source of the generic demo is available here: https://github.com/andreondra/simplex-demo
+  <a href="https://github.com/jeffreytse/jekyll-theme-yat">
+    <img alt="jekyll-theme-yat →~ jekyll" src="https://user-images.githubusercontent.com/9413601/106478481-346fdf00-64e4-11eb-9385-1ab5329c3234.png" width="600">
+  </a>
 
-# <img src="assets/img/icons/simplex_logo.svg" alt="Simplex" height="50"/>
+  <h1>JEKYLL YAT THEME</h1>
 
-A *simple* yet neat blogging theme. Developed for the [golas blog](https://golas.blog/) project.
+</div>
 
+<h4 align="center">
+  <a href="https://jekyllrb.com/" target="_blank"><code>Jekyll</code></a> theme for elegant writers.
+</h4>
 
-## 👓 Preview
-![Preview](preview.gif)
+<p align="center">
+  <a href="https://jeffreytse.github.io/jekyll-theme-yat">
+    <img src="https://github.com/jeffreytse/jekyll-theme-yat/workflows/Github%20Pages/badge.svg"
+      alt="Github Pages" />
+  </a>
 
-## 💎 Features
-### Responsive
-![Responsivity preview](previewResponsive.gif)
+  <a href="https://badge.fury.io/rb/jekyll-theme-yat">
+    <img src="https://badge.fury.io/rb/jekyll-theme-yat.svg"
+      alt="Gem Version" />
+  </a>
 
-### Dark mode
-![Dark mode preview](previewDark.gif)
+  <a href="https://opensource.org/licenses/MIT">
+    <img src="https://img.shields.io/badge/License-MIT-brightgreen.svg"
+      alt="License: MIT" />
+  </a>
 
-### Buttons
-![Buttons preview](previewButtons.png)
+  <a href="https://liberapay.com/jeffreytse">
+    <img src="https://img.shields.io/liberapay/goal/jeffreytse.svg?logo=liberapay"
+      alt="Donate (Liberapay)" />
+  </a>
 
-### Lity Lightbox 
-Supports images, videos, iFrames and more. See below for syntax.
+  <a href="https://patreon.com/jeffreytse">
+    <img src="https://img.shields.io/badge/support-patreon-F96854.svg?style=flat-square"
+      alt="Donate (Patreon)" />
+  </a>
 
-### Open Graph tags
+  <a href="https://ko-fi.com/jeffreytse">
+  <img height="20" src="https://www.ko-fi.com/img/githubbutton_sm.svg"
+  alt="Donate (Ko-fi)" />
+  </a>
+</p>
 
-## ℹ Installation
+<div align="center">
+  <sub>Built with ❤︎ by
+  <a href="https://jeffreytse.net">jeffreytse</a> and
+  <a href="https://github.com/jeffreytse/jekyll-theme-yat/graphs/contributors">contributors </a>
+  </sub>
+</div>
+
+<br>
+
+Hey, nice to meet you, you found this [Jekyll][jekyll] theme. Here the
+_YAT (Yet Another Theme)_ is a modern responsive theme. It's quite
+clear, clean and neat for writers and posts. **If you are an elegant
+writer and focus on content, don't miss it.**
+
+<p align="center">
+Like this elegant theme? You can give it a star or sponsor me!<br>
+I will respect your crucial support and say THANK YOU!
+</p>
+
+<p align="center">
+
+  <img src="https://user-images.githubusercontent.com/9413601/91842897-6a840b00-ec87-11ea-95ca-52abcc1ac063.png" alt="demo-screenshot" width="100%"/>
+
+</p>
+
+<h4 align="center">BANNER</h4>
+
+<p align="center">
+
+  <img src="https://user-images.githubusercontent.com/9413601/123897812-ae729a00-d996-11eb-96b8-b76ba926f555.gif" alt="demo-screenshot" width="100%"/>
+
+</p>
+
+## Features
+
+- Support beautiful **Night Mode**.
+- Modern responsive web design.
+- Full layouts `home`, `post`, `tags`, `archive` and `about`.
+- Uses font awesome 5 for icons.
+- Beautiful page banner with image and video.
+- Beautiful Syntax Highlight using [highlight.js][highlight-js].
+- RSS support using [Jekyll Feed][jekyll-feed] gem.
+- Optimized for search engines using [Jekyll Seo Tag][jekyll-seo-tag] gem.
+- Sitemap support using [Jekyll Sitemap][jekyll-sitemap] gem.
+- Complex and flexible table support using [Jekyll Spaceship][jekyll-spaceship] gem.
+- MathJAX and LaTeX optional support using [Jekyll Spaceship][jekyll-spaceship] gem.
+- Media (Youtube, Spotify, etc.) support using [Jekyll Spaceship][jekyll-spaceship] gem.
+- Diagram (PlantUML, Mermaid) support using [Jekyll Spaceship][jekyll-spaceship] gem.
+- Google Translation support.
+- New post tag support.
+
+Also, visit the [Live Demo][yat-live-demo] site for the theme.
+
+## Installation
+
+There are three ways to install:
+
+- As a [gem-based theme](https://jekyllrb.com/docs/themes/#understanding-gem-based-themes).
+- As a [remote theme](https://blog.github.com/2017-11-29-use-any-theme-with-github-pages/) (GitHub Pages compatible).
+- Forking/directly copying all of the theme files into your project.
+
+### Gem-based Theme Method
 
 Add this line to your Jekyll site's `Gemfile`:
 
 ```ruby
-gem "jekyll-theme-simplex"
+gem "jekyll-theme-yat"
 ```
 
 And add this line to your Jekyll site's `_config.yml`:
 
 ```yaml
-theme: jekyll-theme-simplex
+theme: jekyll-theme-yat
 ```
 
 And then execute:
 
-    $ bundle
+```bash
+$ bundle
+```
 
 Or install it yourself as:
 
-    $ gem install jekyll-theme-simplex
+```bash
+$ gem install jekyll-theme-yat
+```
 
-## ✔ Usage
+### Remote Theme Method with GitHub Pages
 
-### ⚙ Setting up the template
-Add following to the `_config.yml`:
+Remote themes are similar to Gem-based themes, but do not require `Gemfile` changes or whitelisting making them ideal for sites hosted with GitHub Pages.
+
+To install:
+
+Add this line to your Jekyll site's `Gemfile`:
+
+```ruby
+gem "github-pages", group: :jekyll_plugins
+```
+
+And add this line to your Jekyll site's `_config.yml`:
+
 ```yaml
-logo_img: /assets/img/icons/golasblog_logo.svg #Absolute path to the logo. If not specified, the title will be displayed instead.
-copyright: © Golasowski 2020 #Your copyright.
-
-collections:
-    category:
-        output: true
-    authors:
-        output: false
-
-defaults:
-  -
-    scope:
-      path: ""
-      type: category
-    values:
-      layout: "category"
+# theme: owner/name --> Don't forget to remove/comment the gem-based theme option
+remote_theme: "jeffreytse/jekyll-theme-yat"
 ```
 
-### ✨ Defining categories
-Create a `_category` folder in the root directory of the blog. Create a `.md` file for every category with the contents:
-```
----
-category: [design] #Category ID.
-hue: var(--c-themeHueOrange) #Category hue. See note [1].
-title: Design #Category title.
-description: Lorem ipsum dolor sit amet.
----
+And then execute:
+
+```bash
+$ bundle
 ```
 
-### 🤵 Defining authors
-Create a `_authors` folder in the root directory. Create a `.md` file for every author with the contents:
-```
----
-nick: golas #Author's nick.
-full_name: Andrew Golasowski #Author's full name.
-photo_dir: assets/img/authors/golas.png #Path to the author's pic.
----
-```
+### GitHub Pages without limitation
 
-### 📰 Defining the menu
-Create a `_data` folder in the root directory. In the folder, create a `nav.yaml` file. Here's an example:
-```yaml
-- title: Programming #Menu item title.
-  url: category/programming.html #Menu item url.
-  icon: assets/img/icons/programming.svg #Menu item icon.
-  hue: "var(--c-themeHueRed)" #Menu item hue - see note [1].
-  subnav: #Subnav. See note [2].
-      - title: C++ #Submenu item title.
-        url: category/cpp.html #Submenu item url.
-        hue: "var(--c-themeHueOrange)" #Submenu item hue.
-        subnav: #Another subnav
-            - title: Libraries
-              url: libs.html
-              hue: "var(--c-themeHueBlue)"
-- title: Design
-  url: category/design.html
-  icon: assets/img/icons/design.svg
-  hue: "var(--c-themeHueRed)"
-```
-#### Pro tip:
-Use color icons with the same hue as the menu items. Icons will be black and on hover the color will be shown.
+GitHub Pages runs in `safe` mode and only allows [a set of whitelisted plugins/themes](https://pages.github.com/versions/). **In other words, the third-party gems will not work normally**.
 
-### ✒ Creating posts
-Posts are created in the `_posts` directory. Following front matter attributes are supported:
-```
----
-layout: post #Do not change.
-category: [programming, testing] #One, more categories or no at all.
-title: "Lorem ipsum" #Article title.
-author: andy #Author's nick.
-nextPart: _posts/2021-01-30-example.md #Next part.
-prevPart: _posts/2021-01-30-example.md #Previous part.
-og_image: assets/example.png #Open Graph preview image.
-og_description: "Example description." #Open Graph description.
-fb_app_id: example
----
-Your markdown content here.
-```
+To use the third-party gem in GitHub Pages without limitation:
 
-### ⚡ Syntax highlighting
-The theme uses Pygments CSS created by [@richleland](https://github.com/richleland). If you want to modify the highlighting styles, just download different CSS or create your own - see [Jekyll docs](https://jekyllrb.com/docs/liquid/tags/#stylesheets-for-syntax-highlighting).
+Here is a GitHub Action named [jekyll-deploy-action](https://github.com/jeffreytse/jekyll-deploy-action) for Jekyll site deployment conveniently. 👍
 
-Note - `@media` is used to manage different styles for light and dark web browser mode. See `_variables.scss` file for details.
+## Usage
 
-### 📷 Inserting pictures
-Classic Markdown syntax is supported. However, to be able to use the lightbox feature, you have to use HTML syntax. Minimal example:
-```html
-<a href="/assets/example.jpg" data-lity>
-  <img src="/assets/example_thumbnail.jpg"/>
-</a>
-```
+Add or update your available layouts, includes, sass and/or assets.
 
-To provide image description use this syntax:
-```html
-<div class="sx-picture">
-  <a href="/assets/example.jpg" data-lity>
-    <img src="/assets/example_thumbnail.jpg"/>
-  </a>
-  <span class="sx-subtitle">My picture description.</span>
-</div>
-```
-
-**Do not forget the `data-lity` attribute.**
-
-#### ↔ Centering
-To center pictures, put the code inside a `div` with `sx-center` class like this:
-```html
-<div markdown=1 class="sx-center">
-  ![My picture](/assets/example.jpg)
-</div>
-```
-
-### 🔘 Buttons
-Buttons can be inserted with the following syntax. Just replace `theme` with `red`, `green`, `blue`, `orange`, `purple` or `brown`, specify the target link in `href` attribute and the icon in `src` attribute.
-```html
-<div class='sx-button'>
-  <a href='https://your.link.here.example.com/' class='sx-button__content theme'>
-    <img src='/assets/img/icons/example_icon.svg'/>#{text}
-  </a>
-</div>
-```
-
-Markdown attribute can be omitted if you don't use markdown inside the block (e.g. by using the lightbox syntax).
-
-### ℹ Notes
-[1] Hue can be either one of the predefined colors or any of the CSS `color` attribute supported values (hex, rgb...).
-
-[2] Submenus are generated recursively, so any menu (and submenu) can have its own submenu.
-
-#### Predefined colors
-You can use following predefined colors:
-```scss
---c-themePrimaryLight: #EFEFEF;
---c-themePrimaryDark:  #101010;
---c-themeSecondaryLight: #DADADA;
---c-themeSecondaryDark: #252525;
---c-themeTerniaryLight: #AEAEAE;
---c-themeTerniaryDark: #515151;
---c-themeQuaternaryLight: #919191;
---c-themeQuaternaryDark: #888888;
-
---c-themeHueRed: #C02717;
---c-themeHueGreen: #8EA604;
---c-themeHueBlue: #2E86AB;
---c-themeHueOrange: #E59500;
---c-themeHuePurple: #9F00CE;
---c-themeHueBrown: #230007;
-```
-These colors are CSS variables, usage: `var(--var-name)`
-
-## Add-ons
-Add-ons are distributed as Jekyll plugins. Just download any desired `.rb` file from the repository `_plugin` folder and put it in your `_plugin` folder.
-
-### Buttons (button.rb)
-Adds a tag to simplify insertion of buttons:
-```
-{% button red|https://www.example.com/|/assets/img/icons/cog.svg %}
-Download binary
-{% endbutton %}
-```
-
-## 🤝 Contributing
- 
-Bug reports and pull requests are welcome on [GitHub](https://github.com/andreondra/jekyll-theme-simplex).
-
-## ⚙ Development
+## Development
 
 To set up your environment to develop this theme, run `bundle install`.
 
 Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
-If you recieve an error stating, `"require': cannot load such file -- webrick (LoadError)'` Simply run `bundle add webrick` and this will install the dependencies for running the Jekyll and then you may repeat Step 2!
 
-When your theme is released, only the files in `_layouts`, `_includes`, `_sass` and `assets` tracked with Git will be bundled.
-To add a custom directory to your theme-gem, please edit the regexp in `jekyll-theme-simplex.gemspec` accordingly.
+When your theme is released, only the files in `_data`, `_layouts`, `_includes`, `_sass` and `assets` tracked with Git will be bundled.
+To add a custom directory to your theme-gem, please edit the regexp in `jekyll-theme-yat.gemspec` accordingly.
 
-## Credits
-Includes icons by [uxwing](https://uxwing.com/).
+## Contributing
 
-The lightbox feature is provided by [Lity](https://github.com/jsor/lity) licensed under the [MIT License](https://opensource.org/licenses/MIT).
+Issues and Pull Requests are greatly appreciated. If you've never contributed to an open source project before I'm more than happy to walk you through how to create a pull request.
 
-Uses [jQuery](https://github.com/jquery/jquery) JavaScript plugin licensed under the [MIT License](https://opensource.org/licenses/MIT).
+You can start by [opening an issue](https://github.com/jeffreytse/jekyll-theme-yat/issues/new) describing the problem that you're looking to resolve and we'll go from there.
 
-## ⚖ License
-© Ondrej Golasowski. The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+## License
 
+This theme is licensed under the [MIT license](https://opensource.org/licenses/mit-license.php) © JeffreyTse.
+
+<!-- External links -->
+
+[jekyll]: https://jekyllrb.com/
+[yat-git-repo]: https://github.com/jeffreytse/jekyll-theme-yat/
+[yat-live-demo]: https://jeffreytse.github.io/jekyll-theme-yat/
+[jekyll-spaceship]: https://github.com/jeffreytse/jekyll-spaceship
+[jekyll-seo-tag]: https://github.com/jekyll/jekyll-seo-tag
+[jekyll-sitemap]: https://github.com/jekyll/jekyll-sitemap
+[jekyll-feed]: https://github.com/jekyll/jekyll-feed
+[highlight-js]: https://github.com/highlightjs/highlight.js
